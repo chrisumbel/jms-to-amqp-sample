@@ -10,7 +10,7 @@ public class SampleEndpoint {
 	}
 
 	@ServiceActivator
-	public String hello(String input) throws Exception {
+	public String transform(String input) throws Exception {
 		return "SHUNTED: " + input;
 	}
 }

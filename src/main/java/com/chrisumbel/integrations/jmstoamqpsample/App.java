@@ -43,17 +43,7 @@ public class App {
 	{
 		return new ActiveMQConnectionFactory("tcp://ACTIVEMQ-HOST:61616");
 	}
-	
-	@Bean
-	public DirectChannel inputChannel() {
-		return new DirectChannel();
-	}
-
-	@Bean
-	public DirectChannel outputChannel() {
-		return new DirectChannel();
-	}
-	
+		
 	@Bean(name = PollerMetadata.DEFAULT_POLLER)
 	public PollerMetadata poller() {
 		return Pollers.fixedRate(500).get();
